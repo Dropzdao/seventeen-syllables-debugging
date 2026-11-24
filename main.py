@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Seventeen Syllables of Debugging — one haiku about debugging, written to /output/entry.txt.
 
-The haiku (5-7-5, 67 characters):
+The haiku (5-7-5, 66 characters):
     red line in the log
     three a.m. cursor blinks, waits
     it was my typo

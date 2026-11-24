@@ -18,6 +18,12 @@ HAIKU = "red line in the log\nthree a.m. cursor blinks, waits\nit was my typo"
 
 
 def main() -> None:
+    # Self-check against the competition gate before writing: the entry must
+    # be UTF-8 text of 1 to 200 characters, three lines in the 5-7-5 shape.
+    if not 1 <= len(HAIKU) <= 200:
+        raise SystemExit(f"entry must be 1-200 characters, got {len(HAIKU)}")
+    if HAIKU.count("\n") != 2:
+        raise SystemExit("entry must be exactly 3 lines")
     os.makedirs("/output", exist_ok=True)
     with open("/output/entry.txt", "w", encoding="utf-8") as f:
         f.write(HAIKU)
